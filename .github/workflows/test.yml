@@ -28,6 +28,11 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-maven-
 
+    - name: print version
+      run: |
+        /usr/bin/google-chrome --version 
+          
+
     - name: Install dependencies and run tests
       run: mvn clean install
 
