@@ -31,7 +31,7 @@ jobs:
     - name: print version
       run: |
         /usr/bin/google-chrome --version 
-          
+        mkdir "src/screenshot"  
 
     - name: Install dependencies and run tests
       run: mvn test -Dtest=ScreenShot
