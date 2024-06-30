@@ -35,7 +35,9 @@ jobs:
   
 
     - name: Install dependencies and run tests
-      run: mvn test -Dtest=ScreenShot
+      run: |
+        ls -al src/screenshot
+        mvn test -Dtest=ScreenShot
 
     - name: Archive Surefire test reports
       if: always()
