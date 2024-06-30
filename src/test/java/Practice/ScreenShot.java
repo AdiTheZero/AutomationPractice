@@ -31,10 +31,10 @@ public class ScreenShot {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
     String timestamp = LocalDateTime.now().format(formatter);
 	  try {
-		  var folderPath = new File("src\\screenshot");
+		  var folderPath = new File("src/screenshot");
 		  System.out.println(folderPath.getAbsolutePath());
 		  FileUtils.cleanDirectory(folderPath);
-          FileUtils.copyFile(scre, new File("src\\screenshot\\screenshot_"+timestamp+ ".png"));
+          FileUtils.copyFile(scre, new File("src/screenshot/screenshot_"+timestamp+ ".png"));
         
       } catch (IOException e) {
           System.out.print("Error while taking screenshot: " + e);
